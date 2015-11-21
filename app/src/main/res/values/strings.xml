@@ -16,4 +16,19 @@
     <string name="already_registered">Already Registered? Click here to Login.</string>
     <string name="login">Login</string>
     <string name="or">OR</string>
+    <string name="Image_for_logo">NSE Logo</string>
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <string name="main">Main</string>
+    <string name="my_nse">my NSE</string>
+    <string name="about_us_text">About Us</string>
+    <string name="contact_us_text">Contact Us</string>
+    <string name="feedback_text">Feedback</string>
+    <string name="others">Others</string>
+    <string name="support_text">Support</string>
+    <string name="action_tell_friends">Tell A Friend</string>
+    <string name="leaders_text">Leadership</string>
+    <string name="action_directory">Directory</string>
+    <string name="meet_president_text">Meet The President</string>
+    <string name="past_leaders_text">Past Leaders</string>
 </resources>
