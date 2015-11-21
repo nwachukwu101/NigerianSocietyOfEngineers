@@ -1,0 +1,67 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_authentication"
+    tools:context="com.dipoletech.nigeriansocietyofengineers.AuthenticationFragment"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg1"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nse_logo"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nse_name"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/to_login"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/sing_in"
+                android:typeface="sans"
+                />
+
+            <Button
+                android:id="@+id/to_register"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/sign_up"
+                android:typeface="sans"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
