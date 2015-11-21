@@ -1,14 +1,20 @@
 package com.dipoletech.nigeriansocietyofengineers;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        AboutUsFragment.OnFragmentInteractionListener,
+        ContactUsFragment.OnFragmentInteractionListener{
 
     private DrawerLayout drawerlayout;
     private NavigationView navigationView;
@@ -49,7 +55,50 @@ public class MainActivity extends AppCompatActivity {
         //make all the menu icons to appear as required
         navigationView.setItemIconTintList(null);
 
+        //swap the fragment home
+        swapFragment(new MainActivityFragment(),"my NSE");
+
+        //set the navigation ite, click listener
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int id = item.getItemId();
+                switch (id)
+                {
+                    case R.id.action_home:
+                        swapFragment(new MainActivityFragment(),"my NSE");
+                        drawerlayout.closeDrawers();
+                        break;
+                    case R.id.action_about_us:
+                        swapFragment(new AboutUsFragment(),"About NSE");
+                        drawerlayout.closeDrawers();
+                        break;
+                    case R.id.action_contact_us:
+                        swapFragment(new ContactUsFragment(),"Contact NSE");
+                        drawerlayout.closeDrawers();
+                        break;
+
+                }
+
+                return true;
+            }
+        });
+
+
 
     }
 
+    private void swapFragment(Fragment fragment, String title) {
+        getSupportActionBar().setTitle(title);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentContainer, fragment);
+        //fragmentTransaction.addToBackStack(title);
+        fragmentTransaction.commit();
+    }
+
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
