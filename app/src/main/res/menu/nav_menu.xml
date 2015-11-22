@@ -9,7 +9,7 @@
             <item
                     android:id="@+id/action_home"
                     android:checked="false"
-                    android:icon="@drawable/ic_action_planet"
+                    android:icon="@drawable/ic_action_users"
                     android:title="@string/my_nse" />
                 <item
                     android:id="@+id/action_about_us"
@@ -26,7 +26,7 @@
                 <item
                     android:id="@+id/action_review_app"
                     android:checked="false"
-                    android:icon="@drawable/ic_action_phone_outgoing"
+                    android:icon="@drawable/ic_action_monolog"
                     android:title="@string/feedback_text" />
 
 
@@ -41,23 +41,23 @@
             <item
                 android:id="@+id/action_meet_president"
                 android:checked="false"
-                android:icon="@drawable/ic_action_settings"
+                android:icon="@drawable/ic_action_armchair"
                 android:title="@string/meet_president_text" />
             <item
                 android:id="@+id/action_learders"
                 android:checked="false"
-                android:icon="@drawable/ic_action_help"
+                android:icon="@drawable/ic_action_business"
                 android:title="@string/leaders_text" />
             <item
                 android:id="@+id/action_directory"
                 android:checked="false"
-                android:icon="@drawable/ic_action_share"
+                android:icon="@drawable/ic_action_link"
                 android:title="@string/action_directory" />
 
             <item
                 android:id="@+id/past_excos"
                 android:checked="false"
-                android:icon="@drawable/ic_action_settings"
+                android:icon="@drawable/ic_action_mustache"
                 android:title="@string/past_leaders_text" />
 
 

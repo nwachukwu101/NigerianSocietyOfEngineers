@@ -14,7 +14,10 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements
         AboutUsFragment.OnFragmentInteractionListener,
-        ContactUsFragment.OnFragmentInteractionListener{
+        ContactUsFragment.OnFragmentInteractionListener,
+        ProfileFragment.OnFragmentInteractionListener,
+        PaymentsFragment.OnFragmentInteractionListener,
+        InfoFragment.OnFragmentInteractionListener{
 
     private DrawerLayout drawerlayout;
     private NavigationView navigationView;

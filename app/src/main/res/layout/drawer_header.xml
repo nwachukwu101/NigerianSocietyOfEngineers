@@ -3,17 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/drawer_bg">
 
+    <!--<ImageView-->
+        <!--android:id="@+id/profile_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@drawable/civil_brdge"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:contentDescription="@string/Image_for_logo" />-->
     <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/nse_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/nse_logo"
-        android:scaleType="fitXY"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="10dp"
-        android:contentDescription="@string/Image_for_logo" />
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nse_name"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
 </RelativeLayout>
