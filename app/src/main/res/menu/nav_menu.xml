@@ -1,0 +1,97 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item android:title="@string/main">
+        <menu>
+            <item
+                    android:id="@+id/action_home"
+                    android:checked="false"
+                    android:icon="@drawable/ic_action_users"
+                    android:title="@string/my_nse" />
+                <item
+                    android:id="@+id/action_about_us"
+                    android:checked="false"
+                    android:icon="@drawable/ic_action_info"
+                    android:title="@string/about_us_text" />
+
+                <item
+                    android:id="@+id/action_contact_us"
+                    android:checked="false"
+                    android:icon="@drawable/ic_action_phone_outgoing"
+                    android:title="@string/contact_us_text" />
+
+                <item
+                    android:id="@+id/action_review_app"
+                    android:checked="false"
+                    android:icon="@drawable/ic_action_monolog"
+                    android:title="@string/feedback_text" />
+
+
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/header"
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/action_meet_president"
+                android:checked="false"
+                android:icon="@drawable/ic_action_armchair"
+                android:title="@string/meet_president_text" />
+            <item
+                android:id="@+id/action_learders"
+                android:checked="false"
+                android:icon="@drawable/ic_action_business"
+                android:title="@string/leaders_text" />
+            <item
+                android:id="@+id/action_directory"
+                android:checked="false"
+                android:icon="@drawable/ic_action_link"
+                android:title="@string/action_directory" />
+
+            <item
+                android:id="@+id/past_excos"
+                android:checked="false"
+                android:icon="@drawable/ic_action_mustache"
+                android:title="@string/past_leaders_text" />
+
+
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/header2"
+        android:title="@string/others">
+        <menu>
+            <item
+                android:id="@+id/action_support"
+                android:checked="false"
+                android:icon="@drawable/ic_action_help"
+                android:title="@string/support_text" />
+            <item
+                android:id="@+id/action_tell_friends"
+                android:checked="false"
+                android:icon="@drawable/ic_action_share"
+                android:title="@string/action_tell_friends" />
+            <item
+                android:id="@+id/action_settings_drawer"
+                android:checked="false"
+                android:icon="@drawable/ic_action_settings"
+                android:title="@string/action_settings" />
+
+        </menu>
+    </item>
+
+
+    <!--<item-->
+        <!--android:id="@+id/heder2"-->
+        <!--android:icon="@drawable/xavitech"-->
+        <!--android:title="@string/powered_by" />-->
+
+</menu>

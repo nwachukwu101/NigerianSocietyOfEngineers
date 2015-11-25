@@ -46,6 +46,8 @@
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:text="@string/sing_in"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_light"
                 android:typeface="sans"
                 />
 
@@ -56,6 +58,8 @@
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:text="@string/sign_up"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_light"
                 android:typeface="sans"/>
 
         </LinearLayout>
