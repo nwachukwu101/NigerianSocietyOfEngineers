@@ -31,7 +31,7 @@ public class LoginFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View rootView;
-    private TextView userNameTextView;
+    private TextView emailTextView;
     private TextView passwordTextView;
     private SignInButton loginWithGButton;
     private Button loginButton;
@@ -39,7 +39,7 @@ public class LoginFragment extends Fragment {
     //this interface shall dtetct when the login button is clicked
     public interface loginButtonClicked
     {
-        public void loginButtonClicked();
+        void loginButtonClicked(String userName, String password);
     }
 
     private OnFragmentInteractionListener mListener;
@@ -81,7 +81,7 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         rootView =  inflater.inflate(R.layout.fragment_login, container, false);
 
-        userNameTextView = (TextView) rootView.findViewById(R.id.login_username);
+        emailTextView = (TextView) rootView.findViewById(R.id.login_email);
 
         passwordTextView = (TextView) rootView.findViewById(R.id.login_password);
         loginButton = (Button) rootView.findViewById(R.id.login_button);
@@ -91,7 +91,19 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 //you shall grab the username and password text, validate it and then pass them to
                 // the activity
-                ((loginButtonClicked) getActivity()).loginButtonClicked();
+
+                String email = emailTextView.getText().toString().trim();
+                String password = passwordTextView.getText().toString().trim();
+                if (email.isEmpty())
+                {
+                    emailTextView.setError("Email is Required");
+                }else if(password.isEmpty())
+                {
+                    passwordTextView.setError("Password is Required");
+                }
+                else {
+                    ((loginButtonClicked) getActivity()).loginButtonClicked(email,password);
+                }
 
             }
         });
@@ -101,7 +113,7 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 //you shall grab the username and password text, validate it and then pass them to
                 // the activity
-                ((loginButtonClicked) getActivity()).loginButtonClicked();
+                //((loginButtonClicked) getActivity()).loginButtonClicked(userName, password);
             }
         });
         return rootView;

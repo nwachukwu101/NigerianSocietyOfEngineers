@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 
 /**
@@ -28,6 +30,14 @@ public class RegisterFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private View rootView;
+    private EditText emailEditTexxt;
+    private EditText nameEditTex;
+    private EditText passwordEditTex;
+    private String email;
+    private Button regButton;
+    private String name;
+    private String password;
 
     /**
      * Use this factory method to create a new instance of
@@ -51,6 +61,11 @@ public class RegisterFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public interface registerUser
+     {
+
+         public void registerButtonClicked(String name,String email,String password);
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +79,48 @@ public class RegisterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false);
+        rootView =  inflater.inflate(R.layout.fragment_register, container, false);
+
+        //grab the name, email and password
+        emailEditTexxt = (EditText) rootView.findViewById(R.id.reg_email);
+        nameEditTex = (EditText) rootView.findViewById(R.id.reg_name);
+        passwordEditTex = (EditText) rootView.findViewById(R.id.reg_password);
+        //get the register button
+
+        regButton = (Button)rootView.findViewById(R.id.register_button);
+        regButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //get all the credentials
+
+                email = emailEditTexxt.getText().toString().trim();
+
+                name = nameEditTex.getText().toString().trim();
+
+                password = passwordEditTex.getText().toString().trim();
+
+                if (name.isEmpty()) {
+                    nameEditTex.setError("Name is Required");
+                }else if (email.isEmpty())
+                {
+                    emailEditTexxt.setError("Email is Required");
+
+                }else if (password.isEmpty())
+                {
+                    passwordEditTex.setError("Password is Required");
+
+                }else {
+
+                    //tell the main activity
+                    ((registerUser) getActivity()).registerButtonClicked(name,email,password);
+                }
+
+
+
+            }
+        });
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

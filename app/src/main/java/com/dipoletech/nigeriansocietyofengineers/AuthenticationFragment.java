@@ -17,8 +17,8 @@ public class AuthenticationFragment extends Fragment {
 
     public interface toLoginOrRegister
     {
-        public void toLoginButtonClicked();
-        public void toRegisterButtonClicked();
+        void toLoginButtonClicked();
+        void toRegisterButtonClicked();
     }
 
     public AuthenticationFragment() {
