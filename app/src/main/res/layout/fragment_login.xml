@@ -5,94 +5,113 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp"
     tools:context="com.dipoletech.nigeriansocietyofengineers.LoginFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/bg1"
-        android:fitsSystemWindows="true"
-        android:scaleType="centerCrop" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/nse_logo"
-        android:layout_gravity="center"
-        android:layout_margin="10dp" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/nse_name"
-        android:layout_gravity="center" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="30dp">
-
-
-        <TextView
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/username"
-            android:typeface="sans"
-            android:textSize="14sp"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/login_username"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg1"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:layout_marginBottom="5dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:typeface="sans"
-            android:textSize="14sp"
-            android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nse_logo"
+                android:layout_gravity="center"
+                android:layout_margin="10dp" />
 
-        <EditText
-            android:id="@+id/login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:layout_marginBottom="5dp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nse_name"
+                android:layout_gravity="center" />
 
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/login"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/or"
-            android:layout_margin="10dp"/>
-
-        <com.google.android.gms.common.SignInButton
-            android:layout_gravity="center"
-            android:id="@+id/sign_in_with_google"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="30dp">
 
 
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/email"-->
+                <!--android:typeface="sans"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/colorPrimaryDark"-->
+                <!--android:textStyle="bold"/>-->
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/hint_email"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:typeface="sans" />
 
-    </LinearLayout>
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/password"-->
+                <!--android:typeface="sans"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/colorPrimaryDark"-->
+                <!--android:textStyle="bold"/>-->
 
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/hint_password"
+                    android:background="@android:color/white"
+                    android:padding="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="@string/login" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/or"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:layout_gravity="center"
+                    android:id="@+id/sign_in_with_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </NestedScrollView>
 
 
 
