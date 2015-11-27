@@ -2,11 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\DABBY(3pleMinds)\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
+        jar="C:\Users\DABBY(3pleMinds)\AndroidStudioProjects\NigerianSocietyOfEngineers\app\build\intermediates\exploded-aar\com.inthecheesefactory.thecheeselibrary\stated-fragment-support-v4\0.9.3\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
-        <dex dex="C:\Users\DABBY(3pleMinds)\AndroidStudioProjects\NigerianSocietyOfEngineers\app\build\intermediates\pre-dexed\debug\glide-3.5.2-e384895f8e85b4974f3e5599422602efb91b4529.jar" />
+        sha1="845a44ff281b2c75c02594b034398849b71c7217">
+        <dex dex="C:\Users\DABBY(3pleMinds)\AndroidStudioProjects\NigerianSocietyOfEngineers\app\build\intermediates\pre-dexed\debug\classes-c36ff8bc76d8670a8149b9de9b37a994daf1ab42.jar" />
+    </item>
+    <item
+        jar="C:\Users\DABBY(3pleMinds)\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.6\ee373b6d0d6ea36a0a9b0cbabaf16be7e7fc3e30\otto-1.3.6.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ee373b6d0d6ea36a0a9b0cbabaf16be7e7fc3e30">
+        <dex dex="C:\Users\DABBY(3pleMinds)\AndroidStudioProjects\NigerianSocietyOfEngineers\app\build\intermediates\pre-dexed\debug\otto-1.3.6-139938cbee0265191cda1bb3375cb1387910b3a7.jar" />
     </item>
 
 </items>

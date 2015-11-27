@@ -20,11 +20,14 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     public ViewPagerAdapter(FragmentManager manager) {
         super(manager);
+
     }
     @Override
     public Fragment getItem(int position) {
-        return mFragmentList.get(position);
+        Fragment fragment =  mFragmentList.get(position);
+        return fragment;
     }
+
 
     @Override
     public int getCount() {
