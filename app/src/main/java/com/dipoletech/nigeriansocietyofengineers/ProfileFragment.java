@@ -11,11 +11,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.inthecheesefactory.thecheeselibrary.fragment.support.v4.app.StatedFragment;
 
 
 /**
@@ -26,7 +27,8 @@ import com.bumptech.glide.Glide;
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends StatedFragment
+    {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,7 +40,6 @@ public class ProfileFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     private View rootView;
-    private WebView webView;
     private ImageButton imageButton;
     private static final int SELECT_PICTURE = 1;
    // private int RESULT_OK = 1;
@@ -92,13 +93,13 @@ public class ProfileFragment extends Fragment {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_PICK);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
+                getActivity().startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
             }
         });
 
 
-        webView = (WebView) rootView.findViewById(R.id.webView);
-        webView.loadUrl("http://192.168.42.254/api/public/login");
+//        webView = (WebView) rootView.findViewById(R.id.webView);
+//        webView.loadUrl("http://192.168.42.254/api/public/login");
         return rootView;
     }
 
@@ -109,30 +110,36 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode,resultCode,data);
 
-        switch (requestCode) {
-            case SELECT_PICTURE: {
-                if (resultCode == getActivity().RESULT_OK) {
-                    Log.v(TAG, "Result Code: " + resultCode);
-                    Log.v(TAG, "RequestCode: " + requestCode);
+        Toast.makeText(getActivity(),"Fragment Got it: " + requestCode + " "+resultCode,Toast.LENGTH_LONG).show();
+            switch (requestCode) {
+                case SELECT_PICTURE: {
+                    if (resultCode == getActivity().RESULT_OK) {
+                        Log.v(TAG, "Result Code: " + resultCode);
+                        Log.v(TAG, "RequestCode: " + requestCode);
                         final Uri selectedImageUri = data.getData();
                         selectedImagePath = getPath(selectedImageUri);
                         //shall use volley to load it into the image view
                         Glide.with(this)
                                 .load(selectedImagePath)
+                                .centerCrop()
+                                .placeholder(getActivity().getResources().getDrawable(R.drawable.ic_action_user))
                                 .into(profileImage);
+
+                        //later you shall grab the image and update it on the server
+
                         Log.v(TAG, "Uri: " + selectedImageUri);
-
-
+                    }
                 }
+                }
+
             }
 
-        }
 
-    }
 
     private String getPath(Uri uri) {
 

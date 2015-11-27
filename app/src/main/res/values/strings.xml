@@ -33,7 +33,7 @@
     <string name="past_leaders_text">Past Leaders</string>
     <string name="welcome">Welcome:</string>
 
-    <string name="name">Okafor Jerry Hanks: Student Member</string>
+    <string name="name">Name: Okafor Jerry Hanks</string>
 
     <string name="full_name">Full Name:</string>
     <string name="donate">Donate</string>
@@ -43,5 +43,55 @@
     <string name="hint_password">Password</string>
     <string name="hint_name">Name</string>
     <string name="nse_logo">nse_logo</string>
+    <string name="personal_details">Personal Details:</string>
+    <string name="membership">Membership: Graduate Member.</string>
+    <string name="membership_number">Membership Number: 2917653</string>
+    <string name="email_contact">Email: hanksjerry_dedon@yahoo.com</string>
+    <string name="contact_phone">Phone: +2348030520715</string>
+    <string name="contact_address">Address: 20 Hilltop gate , Odenigwe, UNN. this address is supposd to be long as you can see.</string>
+    <string name="other_details">Other Details</string>
+    <string name="interest_details">Interest Areas: Harware, Software, Electronics and Gadgets.</string>
+    <string name="date_sample">Nov, 23 2015</string>
+    <string name="Payment_title">Mebership Annual Due:</string>
+    <string name="like_text">Like</string>
+    <string name="comment_text">Comment</string>
+    <string name="share_text">Share</string>
+    <string name="info_title">Announcement</string>
+    <string name="smple_info">This is a sample info as you can see it is posted by Okafor jerry Hanks. I am in love with software and it makes me feel fine alwasys.</string>
+    <string name="info_by">By: Okafor Jerry Hanks.</string>
+    <string name="job_title">Job Title And Responsibilities:</string>
+    <string name="job_title_text">Job Title: Software Engineer</string>
+    <string name="responsibility">Responsibilities: Design and Implementation of softaware products.</string>
+    <string name="about_me">About Me</string>
+    <string name="about_me_txext">Written in the first person, this is up to 200 words of a personal summary of your professional work</string>
+    <string name="qualification">Qualifications:</string>
+    <string name="prfo_activities">Professional Memberships and Activities:</string>
+    <string name="expert">Expertise:</string>
+    <string name="research">Research Areas:</string>
+    <string name="publication">Selected Publications:</string>
+    <string name="contact_detail">Contact Details:</string>
+    <string name="social_media">Social Media: Twitter: @jerryhanks1, Facebook: www.faceboo.com/hanksjerry_dedon</string>
+    <string name="nse_national_headquarter">NSE NATIONAL HEADQUATERS</string>
+    <string name="nec_abuja">NEC Abuja,</string>
+    <string name="national_hq">National Headquarters,</string>
+    <string name="national_eng_center">National Engineering Center,</string>
+    <string name="plot_103">Plot 1035 Cadestral,</string>
+    <string name="off_national_mosque">Off National Mosque Labour Road,</string>
+    <string name="central_business_district">Central Business District, Garki , Abuja.</string>
+    <string name="nse_conatct">234(09)2917720</string>
+    <string name="nse_email">info@nse.org.ng</string>
+    <string name="nse_xpmb">P.M.B 136866,</string>
+    <string name="nse_location">Wuse, Abuja, Nigeria.</string>
+    <string name="nse_lagos_liason">LAGOS LIASON OFFICE</string>
+    <string name="lagos_engineering_close">1 Engineering Close,</string>
+    <string name="off_idowu">Off Idowu Taylor Street.</string>
+    <string name="victoria_island">Victoria Isalnd, Lagos, Nigeria.</string>
+    <string name="nse_lagos_pmb">P.O.Box 72667.</string>
+    <string name="lagos_nse_email">lagosliason@nse.ng</string>
+    <string name="lagos_nse_conatct">234(1)4766689</string>
+    <string name="contact_nse">CONTACT NSE</string>
+    <string name="subject_hint">Subject</string>
+    <string name="message_hint">Message</string>
+    <string name="send_email">Send</string>
 
 </resources>
